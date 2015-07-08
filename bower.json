@@ -1,0 +1,20 @@
+{
+  "name": "CSSTemplate",
+  "main": "CSSTemplate.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ezakto/CSSTemplate.js",
+  "authors": [
+    "Nicolás Arias <nicolas@nicolasarias.com>"
+  ],
+  "description": "Inject and update dynamic CSS using simple js templating",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "micro",
+    "dynamic",
+    "css",
+    "templating"
+  ],
+  "license": "MIT"
+}
