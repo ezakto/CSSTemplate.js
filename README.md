@@ -26,28 +26,24 @@ This script is intended to be used mostly in the `<head>` to enhance the main st
 
 Now you set the placeholder values by creating a new CSSTemplate instance pointing to our style tag.
 ```js
-(function(){
-    var tpl = new CSSTemplate('css-tpl');
-    tpl.set({
-        baseFontSize: (window.innerHeight / 5) + 'px',
-        windowHeight: window.innerHeight + 'px'
-    });
-}());
+var tpl = new CSSTemplate('css-tpl');
+tpl.set({
+    baseFontSize: (window.innerHeight / 5) + 'px',
+    windowHeight: window.innerHeight + 'px'
+});
 ```
 
 Best usage would be creating a "refresh" function and attach to an event handler:
 ```js
-(function(){
-    var tpl = new CSSTemplate('css-tpl');
-    function handler() {
-        tpl.set({
-            baseFontSize: (window.innerHeight > 320 ? window.innerHeight / 5 : 64) + 'px',
-            windowHeight: window.innerHeight + 'px'
-        });
-    }
-    document.addEventListener('resize', handler);
-    handler();
-}());
+var tpl = new CSSTemplate('css-tpl');
+function handler() {
+    tpl.set({
+        baseFontSize: (window.innerHeight > 320 ? window.innerHeight / 5 : 64) + 'px',
+        windowHeight: window.innerHeight + 'px'
+    });
+}
+document.addEventListener('resize', handler);
+handler();
 ```
 
 The minified script is small enough to be placed directly in the `<head>` without noticeable overhead.
